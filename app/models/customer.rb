@@ -29,11 +29,15 @@ class Customer
   end
 
   def add_review(restaurant, content)
-    Review.new(restaurant, content)
+    Review.new(self, restaurant, content)
   end
 
   def reviews
-    Review.all.filter {|review| review.customer == self.full_name}
+    Review.all.filter {|review| review.customer == self}
+  end
+
+  def restaurants
+    self.reviews.map {|rev| rev.restaurant}
   end
 
   def full_name

@@ -3,9 +3,10 @@ class Review
 
   @@all = []
 
-  def initialize(restaurant, content)
+  def initialize(customer, restaurant, content)
     @restaurant = restaurant
     @content = content
+    @customer = customer
     @@all << self
   end
 
