@@ -7,22 +7,22 @@ customer1 = Customer.new("Bryan", "Reed")
 customer2 = Customer.new("Clark", "Kent")
 customer3 = Customer.new("Clark", "Gable")
 
-# raise "Customer.all did not return collection of instances of Customer" unless Customer.all.is_a?(Array) && Customer.all.first.is_a?(Customer)
+raise "Customer.all did not return collection of instances of Customer" unless Customer.all.is_a?(Array) && Customer.all.first.is_a?(Customer)
 
-# restaurant1 = Restaurant.new("Hardees")
-# restaurant2 = Restaurant.new("Chiles")
+restaurant1 = Restaurant.new("Hardees")
+restaurant2 = Restaurant.new("Chiles")
 
-# raise "Restaurant.all did not return collection of instances of Restaurant" unless Restaurant.all.is_a?(Array) && Restaurant.all.first.is_a?(Restaurant)
+raise "Restaurant.all did not return collection of instances of Restaurant" unless Restaurant.all.is_a?(Array) && Restaurant.all.first.is_a?(Restaurant)
 
-# content1 = "Had a great cheeseburger!"
-# content2 = "This place stinks."
-# content3 = "My water was very cold"
+content1 = "Had a great cheeseburger!"
+content2 = "This place stinks."
+content3 = "My water was very cold"
 
-# review1 = customer2.add_review(restaurant1, content2)
-# review2 = customer2.add_review(restaurant2, content1)
-# review3 = customer3.add_review(restaurant2, content3)
+review1 = customer2.add_review(restaurant1, content2)
+review2 = customer2.add_review(restaurant2, content1)
+review3 = customer3.add_review(restaurant2, content3)
 
-# raise "Customer#add_review(restaurant, content) did not return an instance of Review" unless review1.is_a?(Review) && review3.is_a?(Review)
+raise "Customer#add_review(restaurant, content) did not return an instance of Review" unless review1.is_a?(Review) && review3.is_a?(Review)
 
 # raise "Review.all did not return a collection of instances of Review" unless Review.all.is_a?(Array) && Review.all.first.is_a?(Review)
 # raise "Review.all did not return the correct amount of reviews" unless Review.all.size == 3
@@ -55,14 +55,14 @@ customer3 = Customer.new("Clark", "Gable")
 # raise "Restaurant.find_by_name(name) did not return an instance of Restaurant" unless Restaurant.find_by_name("Chiles").is_a?(Restaurant)
 # raise "Restaurant.find_by_name(name) did not return the correct restaurant" unless Restaurant.find_by_name("Chiles") == restaurant2 && Restaurant.find_by_name("Hardees") == restaurant1
 
-# raise "Customer.all_names should return every customer's full name" unless Customer.all_names.include?("Bryan Reed") && Customer.all_names.include?("Clark Kent") && Customer.all_names.include?("Clark Gable")
+raise "Customer.all_names should return every customer's full name" unless Customer.all_names.include?("Bryan Reed") && Customer.all_names.include?("Clark Kent") && Customer.all_names.include?("Clark Gable")
 
-# raise "Customer.find_by_full_name(full_name) did not return an instance of Customer" unless Customer.find_by_full_name("Clark Kent").is_a?(Customer)
-# raise "Customer.find_by_full_name(full_name) did not return the correct Customer" unless Customer.find_by_full_name("Clark Gable") == customer3
+raise "Customer.find_by_full_name(full_name) did not return an instance of Customer" unless Customer.find_by_full_name("Clark Kent").is_a?(Customer)
+raise "Customer.find_by_full_name(full_name) did not return the correct Customer" unless Customer.find_by_full_name("Clark Gable") == customer3
 
-# raise "Customer.find_all_by_first_name(name) should return a collection" unless Customer.find_all_by_first_name("Bryan").is_a?(Array)
-# raise "Customer.find_all_by_first_name(name) should return a collection of customers" unless Customer.find_all_by_first_name("Bryan").first.is_a?(Customer)
-# raise "Customer.find_all_by_first_name(name) should return an empty collection when there are no matches" unless Customer.find_all_by_first_name("Connor").is_a?(Array) && Customer.find_all_by_first_name("Connor").size == 0
-# raise "Customer.find_all_by_first_name(name) should return a correct collection of customers" unless Customer.find_all_by_first_name("Clark").size == 2 && Customer.find_all_by_first_name("Clark").include?(customer2) && Customer.find_all_by_first_name("Clark").include?(customer3)
+raise "Customer.find_all_by_first_name(name) should return a collection" unless Customer.find_all_by_first_name("Bryan").is_a?(Array)
+raise "Customer.find_all_by_first_name(name) should return a collection of customers" unless Customer.find_all_by_first_name("Bryan").first.is_a?(Customer)
+raise "Customer.find_all_by_first_name(name) should return an empty collection when there are no matches" unless Customer.find_all_by_first_name("Connor").is_a?(Array) && Customer.find_all_by_first_name("Connor").size == 0
+raise "Customer.find_all_by_first_name(name) should return a correct collection of customers" unless Customer.find_all_by_first_name("Clark").size == 2 && Customer.find_all_by_first_name("Clark").include?(customer2) && Customer.find_all_by_first_name("Clark").include?(customer3)
 
 binding.pry
